@@ -1,0 +1,21 @@
+doctype html
+html
+	head
+		title Guessbook
+		meta(charset='utf-8')
+		link(rel='stylesheet' href='css/bootstrap.css')
+	body
+		div.container
+			<h1 class='text-primary text-uppercase'> Express Guessbook 
+			<a href='/new-book' class='btn btn-primary pull-right text-capitalize'> Write in the Guessbook</a></h1>
+			each book in books
+				div(class='panel panel-default')
+					div(class='panel-heading')
+						div(class='text-muted pull-right') #{book.created_at}
+						p.text-primary #{book.title}
+					div(class='panel-body') #{book.content}
+			else
+				h3 No Books!  <a href='/new-book'>Add one</a>		
+
+
+

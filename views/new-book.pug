@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title Guess book
+    link(rel='stylesheet' href='css/bootstrap.css')
+  body
+    div.container
+      h2 Write a new entry
+
+      form(method='post' role='form')
+        div.form-group
+          label(for='title') Title
+          input(type='text' class='form-control' id='title' name='title' placeholder='Entry title' required)
+
+        div.form-group
+          label(for='content') Content
+          textarea(class='form-control' id='content' placeholder="Love Express! It’s a great tool for building websites." rows="3" required name='content')
+
+        div.form-group
+          input(type='submit' class='btn btn-primary' value='Post entry') 
